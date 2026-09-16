@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 620">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#e9fff7"/><stop offset="1" stop-color="#eaf2ff"/></linearGradient></defs>
+<rect width="850" height="620" rx="48" fill="url(#g)"/>
+<path d="M110 510h610" stroke="#cbd9e5" stroke-width="8" stroke-linecap="round"/><path d="M160 510V165" stroke="#cbd9e5" stroke-width="8" stroke-linecap="round"/>
+<path d="M160 420 C235 405 280 370 345 380 S460 318 520 300 S635 235 705 170" fill="none" stroke="#3478f6" stroke-width="13" stroke-linecap="round"/>
+<g fill="#3478f6"><circle cx="160" cy="420" r="10"/><circle cx="275" cy="375" r="10"/><circle cx="395" cy="350" r="10"/><circle cx="520" cy="300" r="10"/><circle cx="620" cy="250" r="10"/><circle cx="705" cy="170" r="10"/></g>
+<circle cx="160" cy="112" r="42" fill="#ffb36b"/><path d="M160 90v44M138 112h44" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+<circle cx="704" cy="492" r="60" fill="#fff" opacity=".8"/><text x="704" y="503" text-anchor="middle" font-family="Arial" font-size="24" font-weight="700" fill="#17324d">GROW</text>
+</svg>
