@@ -13,33 +13,76 @@
 <body>
   <div class="dashboard">
     <aside class="sidebar">
-      <div class="side-logo"><a class="logo" href="index.html"><img src="assets/logo.png" alt="LittleSteps Pediatric Clinic" class="logo-img"></a></div>
-      <div class="side-profile">
-        <div class="profile-row">
-          <div class="avatar">PS</div>
-          <div><b>Priya Sharma</b><small>Parent account</small></div>
-        </div>
+      <div class="side-brand-badge">
+        <span class="side-brand-icon">🏥</span>
+        <span class="side-brand-text">PARENT PORTAL</span>
       </div>
-      <div class="side-label">Parent portal</div>
-      <div class="side-nav"><button class="active" data-dash="overview"><span>⌂</span>Overview</button><button class=""
-          data-dash="children"><span>🧒</span>My Children</button><button class=""
-          data-dash="growthVaccines"><span>📈</span>Growth & Vaccines</button><button class=""
-          data-dash="visitsNotes"><span>📅</span>Visits & Notes</button><button class=""
-          data-dash="documents"><span>📁</span>Documents</button><button class=""
-          data-dash="billing"><span>💳</span>Billing & Payments</button><button class=""
-          data-dash="notifications"><span>🔔</span>Notifications</button><button class=""
-          data-dash="settings"><span>⚙</span>Settings</button></div>
-      <div class="side-bottom"><a class="side-nav"
-          style="padding:11px 12px;color:#627487;font-weight:700;display:flex;align-items:center;gap:8px"
-          href="index.html">↩ Back to clinic site</a></div>
+      <div class="side-nav">
+        <button class="active" data-dash="overview"><span class="nav-icon">⌂</span><span class="nav-text">Overview</span></button>
+        <button class="" data-dash="children"><span class="nav-icon">🧒</span><span class="nav-text">My Children</span></button>
+        <button class="" data-dash="growthVaccines"><span class="nav-icon">📈</span><span class="nav-text">Growth & Vaccines</span></button>
+        <button class="" data-dash="visitsNotes"><span class="nav-icon">📅</span><span class="nav-text">Visits & Notes</span></button>
+        <button class="" data-dash="documents"><span class="nav-icon">📁</span><span class="nav-text">Documents</span></button>
+        <button class="" data-dash="billing"><span class="nav-icon">💳</span><span class="nav-text">Billing & Payments</span></button>
+        <button class="" data-dash="notifications"><span class="nav-icon">🔔</span><span class="nav-text">Notifications</span></button>
+        <button class="" data-dash="settings"><span class="nav-icon">⚙</span><span class="nav-text">Settings</span></button>
+      </div>
     </aside>
     <main class="dash-main">
-      <div class="mobile-dash-menu"><button class="active" data-dash="overview">⌂ Overview</button><button class=""
-          data-dash="children">🧒 My Children</button><button class="" data-dash="growthVaccines">📈 Growth &
-          Vaccines</button><button class="" data-dash="visitsNotes">📅 Visits & Notes</button><button class=""
-          data-dash="documents">📁 Documents</button><button class="" data-dash="billing">💳 Billing &
-          Payments</button><button class="" data-dash="notifications">🔔 Notifications</button><button class=""
-          data-dash="settings">⚙ Settings</button></div>
+      <div class="dash-top-bar">
+        <a class="logo" href="index.html"><img src="assets/logo.png" alt="LittleSteps Logo" class="logo-img" style="height:38px"></a>
+        <div class="dash-top-right">
+          <div class="dash-profile-badge">
+            <div class="avatar">PS</div>
+            <span class="profile-name">Priya Sharma</span>
+          </div>
+          <button class="btn-theme" data-theme-btn aria-label="Toggle theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            <span class="theme-btn-text">Dark</span>
+          </button>
+          <a href="index.html" class="btn btn-outline" style="font-size:13px;padding:8px 14px;display:inline-flex;align-items:center;gap:6px">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+            Logout
+          </a>
+        </div>
+        <button class="dash-menu-btn" data-dash-menu aria-label="Toggle Dashboard Menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <!-- Mobile & Tablet Menu -->
+      <div class="mobile-dash-menu">
+        <div class="mobile-user-profile">
+          <div class="avatar">PS</div>
+          <div class="user-info">
+            <span class="user-name">Priya Sharma</span>
+            <small class="user-role">Parent Account</small>
+          </div>
+        </div>
+        <div class="mobile-dash-divider"></div>
+        <button class="active" data-dash="overview"><span class="nav-icon">⌂</span><span class="nav-text">Overview</span></button>
+        <button class="" data-dash="children"><span class="nav-icon">🧒</span><span class="nav-text">My Children</span></button>
+        <button class="" data-dash="growthVaccines"><span class="nav-icon">📈</span><span class="nav-text">Growth & Vaccines</span></button>
+        <button class="" data-dash="visitsNotes"><span class="nav-icon">📅</span><span class="nav-text">Visits & Notes</span></button>
+        <button class="" data-dash="documents"><span class="nav-icon">📁</span><span class="nav-text">Documents</span></button>
+        <button class="" data-dash="billing"><span class="nav-icon">💳</span><span class="nav-text">Billing & Payments</span></button>
+        <button class="" data-dash="notifications"><span class="nav-icon">🔔</span><span class="nav-text">Notifications</span></button>
+        <button class="" data-dash="settings"><span class="nav-icon">⚙</span><span class="nav-text">Settings</span></button>
+        <div class="mobile-dash-divider"></div>
+        <button class="mobile-action-btn" data-theme-btn aria-label="Toggle theme">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </span>
+          <span class="nav-text theme-btn-text">Dark</span>
+        </button>
+        <a href="index.html" class="mobile-action-btn">
+          <span class="nav-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          </span>
+          <span class="nav-text">Logout</span>
+        </a>
+      </div>
+
       <div id="dashContent"></div>
     </main>
   </div>
