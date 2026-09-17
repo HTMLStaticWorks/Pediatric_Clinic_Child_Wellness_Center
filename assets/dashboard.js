@@ -1,4 +1,3 @@
-s
 const sections = {
     overview: { title: 'Good morning, Priya 👋', sub: "Here’s what’s happening with your family care." },
     children: { title: 'My Children', sub: 'Family profiles, care preferences and recent activity.' },

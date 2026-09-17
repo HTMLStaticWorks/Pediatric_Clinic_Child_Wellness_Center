@@ -205,25 +205,59 @@ img {
     height: 44px;
     font-size: 20px;
     color: var(--ink);
-    cursor: pointer
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-nav {
     display: none;
     border-top: 1px solid var(--line);
-    background: #fff
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(18, 50, 74, 0.08);
+}
+
+.mobile-nav.open {
+    display: block !important;
 }
 
 .mobile-nav .container {
-    display: grid;
-    padding: 10px 0 18px
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 18px;
 }
 
 .mobile-nav a {
-    padding: 12px 4px;
+    padding: 12px 8px;
     border-bottom: 1px solid #eef3f6;
     font-weight: 700;
-    color: #526b7c
+    color: #526b7c;
+    display: block;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mobile-nav a:hover,
+.mobile-nav a.active {
+    background: #edf5fb;
+    color: var(--blue);
+}
+
+.mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+}
+
+.mobile-actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-weight: 800;
 }
 
 .page {
@@ -1223,11 +1257,20 @@ img {
 
 @media(max-width:1100px) {
     .navlinks {
-        display: none
+        display: none !important;
+    }
+
+    .nav-actions .btn {
+        display: none !important;
+    }
+
+    .nav-actions {
+        margin-left: auto;
     }
 
     .hamb {
-        display: block
+        display: inline-flex !important;
+        margin-left: auto;
     }
 
     .hero-grid {
