@@ -1,19 +1,51 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Parent Dashboard | LittleSteps Pediatric Clinic</title>
-<meta name="description" content="LittleSteps parent portal dashboard.">
-<link rel="stylesheet" href="assets/styles.css"></head><body>
-<div class="dashboard">
-<aside class="sidebar">
-  <div class="side-profile"><div class="profile-row"><div class="avatar">PS</div><div><b>Priya Sharma</b><small>Parent account</small></div></div></div>
-  <div class="side-label">Parent portal</div>
-  <div class="side-nav"><button class="active" data-dash="overview"><span>⌂</span>Overview</button><button class="" data-dash="children"><span>🧒</span>My Children</button><button class="" data-dash="growth"><span>📈</span>Growth Charts</button><button class="" data-dash="vaccines"><span>💉</span>Vaccinations</button><button class="" data-dash="appointments"><span>📅</span>Appointments</button><button class="" data-dash="notes"><span>📝</span>Doctor Notes</button><button class="" data-dash="documents"><span>📁</span>Documents</button><button class="" data-dash="billing"><span>💳</span>Billing & Payments</button><button class="" data-dash="notifications"><span>🔔</span>Notifications</button><button class="" data-dash="settings"><span>⚙</span>Settings</button></div>
-  <div class="side-bottom"><a class="side-nav" style="padding:11px 12px;color:#627487;font-weight:700" href="index.html">↩ Back to clinic site</a></div>
-</aside>
-<main class="dash-main">
-  <div class="mobile-dash-menu"><button class="active" data-dash="overview">⌂ Overview</button><button class="" data-dash="children">🧒 My Children</button><button class="" data-dash="growth">📈 Growth Charts</button><button class="" data-dash="vaccines">💉 Vaccinations</button><button class="" data-dash="appointments">📅 Appointments</button><button class="" data-dash="notes">📝 Doctor Notes</button><button class="" data-dash="documents">📁 Documents</button><button class="" data-dash="billing">💳 Billing & Payments</button><button class="" data-dash="notifications">🔔 Notifications</button><button class="" data-dash="settings">⚙ Settings</button></div>
-  <div id="dashContent"></div>
-</main>
-</div><div id="modalRoot"></div><div id="toast" class="toast"></div>
-<script src="assets/site.js"></script><script src="assets/dashboard.js"></script>
-</body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Parent Dashboard | LittleSteps Pediatric Clinic</title>
+  <meta name="description" content="LittleSteps parent portal dashboard.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <div class="side-logo"><a class="logo" href="index.html"><img src="assets/logo.png" alt="LittleSteps Pediatric Clinic" class="logo-img"></a></div>
+      <div class="side-profile">
+        <div class="profile-row">
+          <div class="avatar">PS</div>
+          <div><b>Priya Sharma</b><small>Parent account</small></div>
+        </div>
+      </div>
+      <div class="side-label">Parent portal</div>
+      <div class="side-nav"><button class="active" data-dash="overview"><span>⌂</span>Overview</button><button class=""
+          data-dash="children"><span>🧒</span>My Children</button><button class=""
+          data-dash="growthVaccines"><span>📈</span>Growth & Vaccines</button><button class=""
+          data-dash="visitsNotes"><span>📅</span>Visits & Notes</button><button class=""
+          data-dash="documents"><span>📁</span>Documents</button><button class=""
+          data-dash="billing"><span>💳</span>Billing & Payments</button><button class=""
+          data-dash="notifications"><span>🔔</span>Notifications</button><button class=""
+          data-dash="settings"><span>⚙</span>Settings</button></div>
+      <div class="side-bottom"><a class="side-nav"
+          style="padding:11px 12px;color:#627487;font-weight:700;display:flex;align-items:center;gap:8px"
+          href="index.html">↩ Back to clinic site</a></div>
+    </aside>
+    <main class="dash-main">
+      <div class="mobile-dash-menu"><button class="active" data-dash="overview">⌂ Overview</button><button class=""
+          data-dash="children">🧒 My Children</button><button class="" data-dash="growthVaccines">📈 Growth &
+          Vaccines</button><button class="" data-dash="visitsNotes">📅 Visits & Notes</button><button class=""
+          data-dash="documents">📁 Documents</button><button class="" data-dash="billing">💳 Billing &
+          Payments</button><button class="" data-dash="notifications">🔔 Notifications</button><button class=""
+          data-dash="settings">⚙ Settings</button></div>
+      <div id="dashContent"></div>
+    </main>
+  </div>
+  <div id="modalRoot"></div>
+  <div id="toast" class="toast"></div>
+  <script src="assets/site.js"></script>
+  <script src="assets/dashboard.js"></script>
+</body>
+
+</html>
