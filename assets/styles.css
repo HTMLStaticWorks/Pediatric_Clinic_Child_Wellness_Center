@@ -387,6 +387,11 @@ img {
     padding: 42px 0
 }
 
+.section.section-last,
+.section:last-of-type {
+    padding-bottom: 20px !important
+}
+
 .section.alt {
     background: #eef7fb
 }
@@ -813,7 +818,7 @@ img {
     background: #ffffff;
     color: var(--ink);
     border-top: 1px solid var(--line);
-    padding: 55px 0 24px;
+    padding: 28px 0 24px;
 }
 
 .footer-grid {
@@ -1640,17 +1645,21 @@ img {
         grid-template-columns: 1fr
     }
 
-    .photo-grid .photo-main,
-    .photo-grid .photo-side {
-        min-height: 240px
+    .photo-grid .photo-main {
+        min-height: 220px;
+        height: 240px
     }
 
-    .photo-side {
-        grid-template-columns: 1fr 1fr
+    .photo-grid .photo-side {
+        height: auto !important;
+        min-height: auto !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px
     }
 
     .photo-side>div {
-        min-height: 150px
+        min-height: 150px;
+        height: 160px
     }
 
     .doctor>img {
@@ -2956,13 +2965,16 @@ img {
 
 /* Mobile & Tablet Spacing Optimizations */
 @media (max-width: 768px) {
-    .page section:last-of-type {
-        padding-bottom: 30px !important;
+    .page section:last-of-type,
+    .section-last,
+    main section:last-of-type {
+        padding-bottom: 16px !important;
         margin-bottom: 0 !important;
     }
     
     .footer {
-        margin-top: 10px !important;
+        padding-top: 20px !important;
+        margin-top: 0 !important;
     }
     
     .social-auth-grid {
@@ -2972,5 +2984,100 @@ img {
     .dash-top-bar {
         flex-wrap: wrap;
         gap: 12px;
+    }
+}
+
+/* Appointment Finder Form Grid */
+.appointment-finder-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+.banner-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+@media (max-width: 860px) {
+    .banner {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 24px !important;
+        gap: 18px !important;
+    }
+
+    .banner-actions {
+        width: 100% !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .banner-actions .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .appointment-finder-form {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Clinic Status Badge Styling */
+.clinic-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 14px;
+    background: rgba(16, 185, 129, 0.10);
+    border: 1px solid rgba(16, 185, 129, 0.30);
+    border-radius: 12px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #047857;
+    max-width: 100%;
+    line-height: 1.4;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.08);
+    transition: all 0.25s ease;
+}
+
+.clinic-status-badge .pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10b981;
+    display: inline-block;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25);
+}
+
+.clinic-status-badge .badge-text {
+    line-height: 1.35;
+}
+
+[data-theme="dark"] .clinic-status-badge {
+    background: rgba(16, 185, 129, 0.18) !important;
+    border-color: rgba(16, 185, 129, 0.45) !important;
+    color: #34d399 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme="dark"] .clinic-status-badge .pulse-dot {
+    background: #34d399 !important;
+    box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.35) !important;
+}
+
+@media (max-width: 520px) {
+    .clinic-status-badge {
+        font-size: 12px;
+        padding: 6px 11px;
+        border-radius: 10px;
     }
 }

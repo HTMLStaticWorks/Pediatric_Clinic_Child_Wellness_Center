@@ -33,7 +33,10 @@
             </nav>
             <div class="nav-actions">
                 <button class="btn-theme" data-theme-btn aria-label="Toggle light or dark theme">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
                     <span class="theme-btn-text">Dark</span>
                 </button>
                 <a class="btn btn-outline" href="dashboard.html">Parent Login</a>
@@ -51,8 +54,12 @@
                 <a href="wellness.html">Wellness</a>
                 <a href="contact.html">Support</a>
                 <div class="mobile-actions" style="display:flex;flex-direction:column;gap:10px;margin-top:14px">
-                    <button class="btn-theme" data-theme-btn aria-label="Toggle light or dark theme" style="width:100%;justify-content:center">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <button class="btn-theme" data-theme-btn aria-label="Toggle light or dark theme"
+                        style="width:100%;justify-content:center">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
                         <span class="theme-btn-text">Dark Mode</span>
                     </button>
                     <a class="btn btn-outline" href="dashboard.html">Parent Login</a>
@@ -64,27 +71,32 @@
 
     <main class="page">
         <!-- Unique Hero Section with Live Clinic Status & Appointment Finder -->
-        <section class="hero" style="background:linear-gradient(135deg, rgba(52, 120, 246, 0.08) 0%, rgba(24, 168, 137, 0.06) 100%);padding:45px 0 55px">
+        <section class="hero"
+            style="background:linear-gradient(135deg, rgba(52, 120, 246, 0.08) 0%, rgba(24, 168, 137, 0.06) 100%);padding:45px 0 55px">
             <div class="container hero-grid" style="align-items:center">
                 <div>
-                    <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:var(--white);border-radius:999px;border:1px solid var(--line);box-shadow:var(--shadow2);margin-bottom:14px;font-size:13px;font-weight:700;color:var(--mint)">
-                        <span style="width:8px;height:8px;border-radius:50%;background:#10b981;display:inline-block"></span>
-                        Open Today · 8:30 AM – 6:30 PM · Same-Day Appointments Available
+                    <div class="clinic-status-badge">
+                        <span class="pulse-dot"></span>
+                        <span class="badge-text">Open Today · 8:30 AM – 6:30 PM · Same-Day Appointments Available</span>
                     </div>
-                    <h1 style="font-size:clamp(38px,5.2vw,60px);line-height:1.06;letter-spacing:-.05em;margin:10px 0 16px">
+                    <h1
+                        style="font-size:clamp(28px,4.5vw,56px);line-height:1.08;letter-spacing:-.04em;margin:10px 0 16px;word-break:break-word">
                         Whole-child healthcare <span>designed around your family.</span>
                     </h1>
-                    <p style="font-size:17.5px;color:var(--muted);max-width:540px;line-height:1.6;margin-bottom:24px">
-                        Dedicated pediatricians delivering comprehensive medical care, developmental tracking, and gentle clinical experiences from newborn checkups through adolescence.
+                    <p style="font-size:16.5px;color:var(--muted);max-width:540px;line-height:1.6;margin-bottom:24px">
+                        Dedicated pediatricians delivering comprehensive medical care, developmental tracking, and
+                        gentle clinical experiences from newborn checkups through adolescence.
                     </p>
-                    
+
                     <!-- Instant Appointment Finder Card -->
-                    <div class="card" style="padding:22px;background:var(--white);border-radius:20px;box-shadow:var(--shadow)">
+                    <div class="card"
+                        style="padding:22px;background:var(--white);border-radius:20px;box-shadow:var(--shadow);overflow:hidden">
                         <h3 style="margin:0 0 12px;font-size:17px;color:var(--ink)">⚡ Quick Appointment Finder</h3>
-                        <form class="form-grid" style="grid-template-columns:1fr 1fr;gap:12px" onsubmit="event.preventDefault();window.location='contact.html#booking';">
+                        <form class="appointment-finder-form"
+                            onsubmit="event.preventDefault();window.location='contact.html#booking';">
                             <div class="field" style="margin:0">
                                 <label style="font-size:12px">Child's Age Group</label>
-                                <select style="padding:8px 12px;font-size:13.5px">
+                                <select style="padding:8px 12px;font-size:13.5px;width:100%">
                                     <option>Newborn (0–3 months)</option>
                                     <option>Infant (4–12 months)</option>
                                     <option>Toddler (1–3 years)</option>
@@ -94,7 +106,7 @@
                             </div>
                             <div class="field" style="margin:0">
                                 <label style="font-size:12px">Reason for Visit</label>
-                                <select style="padding:8px 12px;font-size:13.5px">
+                                <select style="padding:8px 12px;font-size:13.5px;width:100%">
                                     <option>Routine Well-Child Physical</option>
                                     <option>Same-Day Sick Visit</option>
                                     <option>Immunization / Vaccines</option>
@@ -103,13 +115,16 @@
                                 </select>
                             </div>
                             <div class="field full" style="margin-top:6px">
-                                <button class="btn btn-primary" style="width:100%;justify-content:center">Find Available Appointment Slots →</button>
+                                <button class="btn btn-primary"
+                                    style="width:100%;justify-content:center;white-space:normal;text-align:center">Find
+                                    Available Appointment Slots →</button>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="hero-art">
-                    <img src="assets/familyhome.jfif" alt="Pediatric doctor consulting with a family in a warm clinic" style="border-radius:28px;box-shadow:var(--shadow);max-height:480px;width:100%;object-fit:cover">
+                    <img src="assets/familyhome.jfif" alt="Pediatric doctor consulting with a family in a warm clinic"
+                        style="border-radius:28px;box-shadow:var(--shadow);max-height:480px;width:100%;object-fit:cover">
                 </div>
             </div>
         </section>
@@ -121,14 +136,17 @@
                     <div>
                         <span class="eyebrow">Age-Based Healthcare</span>
                         <h2>Comprehensive care pathways for every developmental stage.</h2>
-                        <p>We tailor our clinical focus to meet your child's evolving physical, nutritional, and emotional needs.</p>
+                        <p>We tailor our clinical focus to meet your child's evolving physical, nutritional, and
+                            emotional needs.</p>
                     </div>
                 </div>
                 <div class="grid-4">
                     <div class="card" style="border-top:4px solid var(--blue)">
-                        <span class="pill" style="background:var(--blue2);color:var(--blue);margin-bottom:12px">0–12 Months</span>
+                        <span class="pill" style="background:var(--blue2);color:var(--blue);margin-bottom:12px">0–12
+                            Months</span>
                         <h3>Infant Wellness</h3>
-                        <ul style="padding-left:18px;margin:10px 0 16px;color:var(--muted);font-size:13.5px;line-height:1.6">
+                        <ul
+                            style="padding-left:18px;margin:10px 0 16px;color:var(--muted);font-size:13.5px;line-height:1.6">
                             <li>Newborn health evaluations</li>
                             <li>Jaundice & feeding checks</li>
                             <li>Lactation & formula guidance</li>
@@ -137,9 +155,11 @@
                         <a class="btn btn-soft" style="width:100%" href="services.html">Infant Program →</a>
                     </div>
                     <div class="card" style="border-top:4px solid var(--mint)">
-                        <span class="pill" style="background:var(--mint2);color:var(--mint);margin-bottom:12px">1–4 Years</span>
+                        <span class="pill" style="background:var(--mint2);color:var(--mint);margin-bottom:12px">1–4
+                            Years</span>
                         <h3>Toddler Growth</h3>
-                        <ul style="padding-left:18px;margin:10px 0 16px;color:var(--muted);font-size:13.5px;line-height:1.6">
+                        <ul
+                            style="padding-left:18px;margin:10px 0 16px;color:var(--muted);font-size:13.5px;line-height:1.6">
                             <li>Speech & motor screening</li>
                             <li>Toddler nutrition & appetite</li>
                             <li>Potty training milestones</li>
@@ -148,9 +168,11 @@
                         <a class="btn btn-soft" style="width:100%" href="services.html">Toddler Program →</a>
                     </div>
                     <div class="card" style="border-top:4px solid var(--peach)">
-                        <span class="pill" style="background:var(--peach2);color:var(--peach);margin-bottom:12px">5–11 Years</span>
+                        <span class="pill" style="background:var(--peach2);color:var(--peach);margin-bottom:12px">5–11
+                            Years</span>
                         <h3>School-Age Health</h3>
-                        <ul style="padding-left:18px;margin:10px 0 16px;color:var(--muted);font-size:13.5px;line-height:1.6">
+                        <ul
+                            style="padding-left:18px;margin:10px 0 16px;color:var(--muted);font-size:13.5px;line-height:1.6">
                             <li>Annual school physicals</li>
                             <li>Vision & hearing screening</li>
                             <li>Asthma & allergy care</li>
@@ -159,9 +181,11 @@
                         <a class="btn btn-soft" style="width:100%" href="services.html">Child Program →</a>
                     </div>
                     <div class="card" style="border-top:4px solid var(--rose)">
-                        <span class="pill" style="background:var(--rose2);color:var(--rose);margin-bottom:12px">12–18 Years</span>
+                        <span class="pill" style="background:var(--rose2);color:var(--rose);margin-bottom:12px">12–18
+                            Years</span>
                         <h3>Teen Medicine</h3>
-                        <ul style="padding-left:18px;margin:10px 0 16px;color:var(--muted);font-size:13.5px;line-height:1.6">
+                        <ul
+                            style="padding-left:18px;margin:10px 0 16px;color:var(--muted);font-size:13.5px;line-height:1.6">
                             <li>Sports clearance physicals</li>
                             <li>Mental wellness screening</li>
                             <li>Acne & skin guidance</li>
@@ -180,39 +204,49 @@
                     <div>
                         <span class="eyebrow">Clinic Advantages</span>
                         <h2>6 reasons why families choose LittleSteps.</h2>
-                        <p>A modern pediatric experience engineered for clinical safety, transparency, and family peace of mind.</p>
+                        <p>A modern pediatric experience engineered for clinical safety, transparency, and family peace
+                            of mind.</p>
                     </div>
                 </div>
                 <div class="grid-3">
                     <div class="card">
-                        <div class="service-icon icon-blue" style="margin-bottom:14px">🩺</div>
+                        <img src="assets/home2certified.webp" alt="Board-Certified Pediatricians"
+                            class="card-img-thumb">
                         <h3>Board-Certified Pediatricians</h3>
-                        <p>Our clinicians are fellowship-trained board-certified specialists with over 15 years of combined experience in pediatric medicine.</p>
+                        <p>Our clinicians are fellowship-trained board-certified specialists with over 15 years of
+                            combined experience in pediatric medicine.</p>
                     </div>
                     <div class="card">
-                        <div class="service-icon icon-mint" style="margin-bottom:14px">🏥</div>
+                        <img src="assets/home2waitinghall.avif" alt="Separated Sick & Well Waiting Areas"
+                            class="card-img-thumb">
                         <h3>Separated Sick & Well Waiting Areas</h3>
-                        <p>Dual clean-air waiting suites equipped with HEPA filtration prevent healthy children from interacting with seasonal sick visits.</p>
+                        <p>Dual clean-air waiting suites equipped with HEPA filtration prevent healthy children from
+                            interacting with seasonal sick visits.</p>
                     </div>
                     <div class="card">
-                        <div class="service-icon icon-peach" style="margin-bottom:14px">🧪</div>
+                        <img src="assets/home2labs.jfif" alt="On-Site Diagnostics & Rapid Labs" class="card-img-thumb">
                         <h3>On-Site Diagnostics & Rapid Labs</h3>
-                        <p>Get instant results for flu, strep, RSV, urinalysis, and hemoglobin checks right in the clinic during your appointment.</p>
+                        <p>Get instant results for flu, strep, RSV, urinalysis, and hemoglobin checks right in the
+                            clinic during your appointment.</p>
                     </div>
                     <div class="card">
-                        <div class="service-icon icon-rose" style="margin-bottom:14px">📞</div>
+                        <img src="assets/home2nurse.jpg" alt="24/7 Nurse Advice Line" class="card-img-thumb">
                         <h3>24/7 Nurse Advice Line</h3>
-                        <p>Have an urgent symptom question at night? Enrolled families connect directly with a pediatric nurse anytime, 365 days a year.</p>
+                        <p>Have an urgent symptom question at night? Enrolled families connect directly with a pediatric
+                            nurse anytime, 365 days a year.</p>
                     </div>
                     <div class="card">
-                        <div class="service-icon icon-blue" style="margin-bottom:14px">🧸</div>
+                        <img src="assets/home2clinic.jpg" alt="Sensory-Friendly Clinic Rooms" class="card-img-thumb">
                         <h3>Sensory-Friendly Clinic Rooms</h3>
-                        <p>Examination rooms feature gentle dimmable lighting, colorful wall murals, and distraction toys for children with sensory sensitivities.</p>
+                        <p>Examination rooms feature gentle dimmable lighting, colorful wall murals, and distraction
+                            toys for children with sensory sensitivities.</p>
                     </div>
                     <div class="card">
-                        <div class="service-icon icon-mint" style="margin-bottom:14px">📱</div>
+                        <img src="assets/home2parentportal.png" alt="Unified Parent Health Portal"
+                            class="card-img-thumb">
                         <h3>Unified Parent Health Portal</h3>
-                        <p>Instant digital access to growth curves, immunization certificates, doctor visit summaries, and hassle-free prescription refills.</p>
+                        <p>Instant digital access to growth curves, immunization certificates, doctor visit summaries,
+                            and hassle-free prescription refills.</p>
                     </div>
                 </div>
             </div>
@@ -231,29 +265,37 @@
                 </div>
                 <div class="grid-3">
                     <div class="card doctor">
-                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="Dr. Maya Rao">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80"
+                            alt="Dr. Maya Rao">
                         <div class="doctor-body">
                             <div style="display:flex;justify-content:space-between;align-items:center">
                                 <span class="status green">Available Today</span>
                                 <small style="color:var(--muted)">3 Slots Open</small>
                             </div>
                             <h3 style="margin:10px 0 4px">Dr. Maya Rao, MD</h3>
-                            <p style="font-size:13px;color:var(--muted)">Lead Pediatrician · Newborn & Infant Care Specialist</p>
-                            <p style="font-size:13.5px">Specializes in newborn checkups, infant nutrition, and milestone development.</p>
-                            <a class="btn btn-primary" style="width:100%" href="contact.html#booking">Book with Dr. Rao →</a>
+                            <p style="font-size:13px;color:var(--muted)">Lead Pediatrician · Newborn & Infant Care
+                                Specialist</p>
+                            <p style="font-size:13.5px">Specializes in newborn checkups, infant nutrition, and milestone
+                                development.</p>
+                            <a class="btn btn-primary" style="width:100%" href="contact.html#booking">Book with Dr. Rao
+                                →</a>
                         </div>
                     </div>
                     <div class="card doctor">
-                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80" alt="Dr. Arjun Mehta">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80"
+                            alt="Dr. Arjun Mehta">
                         <div class="doctor-body">
                             <div style="display:flex;justify-content:space-between;align-items:center">
                                 <span class="status green">Available Today</span>
                                 <small style="color:var(--muted)">2 Slots Open</small>
                             </div>
                             <h3 style="margin:10px 0 4px">Dr. Arjun Mehta, MD</h3>
-                            <p style="font-size:13px;color:var(--muted)">Pediatric Specialist · Acute Care & Immunization</p>
-                            <p style="font-size:13.5px">Expert in managing childhood asthma, fever evaluation, and routine vaccines.</p>
-                            <a class="btn btn-primary" style="width:100%" href="contact.html#booking">Book with Dr. Mehta →</a>
+                            <p style="font-size:13px;color:var(--muted)">Pediatric Specialist · Acute Care &
+                                Immunization</p>
+                            <p style="font-size:13.5px">Expert in managing childhood asthma, fever evaluation, and
+                                routine vaccines.</p>
+                            <a class="btn btn-primary" style="width:100%" href="contact.html#booking">Book with Dr.
+                                Mehta →</a>
                         </div>
                     </div>
                     <div class="card doctor">
@@ -265,8 +307,10 @@
                             </div>
                             <h3 style="margin:10px 0 4px">Dr. Sofia Chen, MD</h3>
                             <p style="font-size:13px;color:var(--muted)">Pediatrician · Growth & Adolescent Health</p>
-                            <p style="font-size:13.5px">Focused on school physicals, adolescent wellness, and lifestyle routines.</p>
-                            <a class="btn btn-outline" style="width:100%" href="contact.html#booking">Schedule with Dr. Chen →</a>
+                            <p style="font-size:13.5px">Focused on school physicals, adolescent wellness, and lifestyle
+                                routines.</p>
+                            <a class="btn btn-outline" style="width:100%" href="contact.html#booking">Schedule with Dr.
+                                Chen →</a>
                         </div>
                     </div>
                 </div>
@@ -280,29 +324,42 @@
                     <div>
                         <span class="eyebrow">Seamless Appointments</span>
                         <h2>Your visit checklist: 4 steps to a smooth checkup.</h2>
-                        <p>We streamline every visit so you spend less time in paperwork and more time with your pediatrician.</p>
+                        <p>We streamline every visit so you spend less time in paperwork and more time with your
+                            pediatrician.</p>
                     </div>
                 </div>
                 <div class="grid-4">
                     <div class="card">
-                        <div style="width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:12px">1</div>
+                        <div
+                            style="width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:12px">
+                            1</div>
                         <h3>Pre-Register Online</h3>
-                        <p>Complete digital intake forms on your smartphone before leaving home to bypass waiting room clipboards.</p>
+                        <p>Complete digital intake forms on your smartphone before leaving home to bypass waiting room
+                            clipboards.</p>
                     </div>
                     <div class="card">
-                        <div style="width:40px;height:40px;border-radius:50%;background:var(--mint);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:12px">2</div>
+                        <div
+                            style="width:40px;height:40px;border-radius:50%;background:var(--mint);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:12px">
+                            2</div>
                         <h3>Pack Essentials</h3>
-                        <p>Bring your insurance card, photo ID, your child's favorite comfort toy or blanket, and current medication list.</p>
+                        <p>Bring your insurance card, photo ID, your child's favorite comfort toy or blanket, and
+                            current medication list.</p>
                     </div>
                     <div class="card">
-                        <div style="width:40px;height:40px;border-radius:50%;background:var(--peach);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:12px">3</div>
+                        <div
+                            style="width:40px;height:40px;border-radius:50%;background:var(--peach);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:12px">
+                            3</div>
                         <h3>Gentle Vitals Check</h3>
-                        <p>Arrive 10 minutes prior; our pediatric nurse will perform friendly physical measurements in a child-centered room.</p>
+                        <p>Arrive 10 minutes prior; our pediatric nurse will perform friendly physical measurements in a
+                            child-centered room.</p>
                     </div>
                     <div class="card">
-                        <div style="width:40px;height:40px;border-radius:50%;background:var(--rose);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:12px">4</div>
+                        <div
+                            style="width:40px;height:40px;border-radius:50%;background:var(--rose);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;margin-bottom:12px">
+                            4</div>
                         <h3>Digital Summary</h3>
-                        <p>Enjoy an unrushed doctor consultation. Visit notes, care plans, and vaccine updates populate your portal immediately.</p>
+                        <p>Enjoy an unrushed doctor consultation. Visit notes, care plans, and vaccine updates populate
+                            your portal immediately.</p>
                     </div>
                 </div>
             </div>
@@ -320,13 +377,26 @@
                         </div>
                         <a class="btn btn-soft" href="contact.html#booking">Verify Insurance →</a>
                     </div>
-                    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(140px, 1fr));gap:16px;text-align:center;align-items:center">
-                        <div style="padding:16px;background:var(--bg);border-radius:12px;font-weight:800;color:var(--ink)">BlueCross BlueShield</div>
-                        <div style="padding:16px;background:var(--bg);border-radius:12px;font-weight:800;color:var(--ink)">Aetna Healthcare</div>
-                        <div style="padding:16px;background:var(--bg);border-radius:12px;font-weight:800;color:var(--ink)">Cigna Health</div>
-                        <div style="padding:16px;background:var(--bg);border-radius:12px;font-weight:800;color:var(--ink)">UnitedHealthcare</div>
-                        <div style="padding:16px;background:var(--bg);border-radius:12px;font-weight:800;color:var(--ink)">Medicaid / CHIP</div>
-                        <div style="padding:16px;background:var(--bg);border-radius:12px;font-weight:800;color:var(--ink)">Humana Care</div>
+                    <div
+                        style="display:grid;grid-template-columns:repeat(auto-fit, minmax(110px, 1fr));gap:12px;text-align:center;align-items:center">
+                        <div
+                            style="padding:12px 10px;background:var(--bg);border-radius:12px;font-weight:800;color:var(--ink);font-size:13px;word-break:break-word">
+                            BlueCross BlueShield</div>
+                        <div
+                            style="padding:12px 10px;background:var(--bg);border-radius:12px;font-weight:800;color:var(--ink);font-size:13px;word-break:break-word">
+                            Aetna Healthcare</div>
+                        <div
+                            style="padding:12px 10px;background:var(--bg);border-radius:12px;font-weight:800;color:var(--ink);font-size:13px;word-break:break-word">
+                            Cigna Health</div>
+                        <div
+                            style="padding:12px 10px;background:var(--bg);border-radius:12px;font-weight:800;color:var(--ink);font-size:13px;word-break:break-word">
+                            UnitedHealthcare</div>
+                        <div
+                            style="padding:12px 10px;background:var(--bg);border-radius:12px;font-weight:800;color:var(--ink);font-size:13px;word-break:break-word">
+                            Medicaid / CHIP</div>
+                        <div
+                            style="padding:12px 10px;background:var(--bg);border-radius:12px;font-weight:800;color:var(--ink);font-size:13px;word-break:break-word">
+                            Humana Care</div>
                     </div>
                     <div class="note" style="margin-top:20px;text-align:center">
                         Uninsured? We offer self-pay discounts and upfront cost estimates prior to any visit.
@@ -349,20 +419,26 @@
                     <div class="card" style="border-left:5px solid var(--blue)">
                         <span class="status blue" style="margin-bottom:10px">📞 24/7 Nurse Triage</span>
                         <h3>Call Nurse Line First</h3>
-                        <p style="font-size:13.5px;color:var(--muted)">For mild fever under 48 hours, mild cough, feeding questions, minor rashes, or medication dosage advice.</p>
-                        <a class="btn btn-soft" style="margin-top:10px;width:100%" href="tel:5552345678">Call (555) 234-5678</a>
+                        <p style="font-size:13.5px;color:var(--muted)">For mild fever under 48 hours, mild cough,
+                            feeding questions, minor rashes, or medication dosage advice.</p>
+                        <a class="btn btn-soft" style="margin-top:10px;width:100%" href="tel:5552345678">Call (555)
+                            234-5678</a>
                     </div>
                     <div class="card" style="border-left:5px solid var(--mint)">
                         <span class="status green" style="margin-bottom:10px">🏥 Same-Day Clinic</span>
                         <h3>Book Clinic Visit</h3>
-                        <p style="font-size:13.5px;color:var(--muted)">For earache, sore throat, persistent fever, vomiting, minor cuts, asthma flare-ups, or suspected sprains.</p>
-                        <a class="btn btn-primary" style="margin-top:10px;width:100%" href="contact.html#booking">Book Same-Day Visit</a>
+                        <p style="font-size:13.5px;color:var(--muted)">For earache, sore throat, persistent fever,
+                            vomiting, minor cuts, asthma flare-ups, or suspected sprains.</p>
+                        <a class="btn btn-primary" style="margin-top:10px;width:100%" href="contact.html#booking">Book
+                            Same-Day Visit</a>
                     </div>
                     <div class="card" style="border-left:5px solid #ef4444">
                         <span class="status orange" style="margin-bottom:10px">🚨 Emergency Room / 911</span>
                         <h3>Go to Nearest ER</h3>
-                        <p style="font-size:13.5px;color:var(--muted)">For severe shortness of breath, fever in baby under 3 months, seizures, head trauma, or unresponsiveness.</p>
-                        <a class="btn btn-outline" style="margin-top:10px;width:100%;color:#ef4444;border-color:#ef4444" href="tel:911">Call 911 Immediately</a>
+                        <p style="font-size:13.5px;color:var(--muted)">For severe shortness of breath, fever in baby
+                            under 3 months, seizures, head trauma, or unresponsiveness.</p>
+                        <a class="btn btn-outline" style="margin-top:10px;width:100%;color:#ef4444;border-color:#ef4444"
+                            href="tel:911">Call 911 Immediately</a>
                     </div>
                 </div>
             </div>
@@ -379,31 +455,41 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="faq-item"><button class="faq-q">What is included in a routine well-child visit?<span>＋</span></button>
-                        <div class="faq-a">A well-child visit includes a full physical exam, growth measurement, developmental milestone check, hearing/vision screening, required vaccines, and personalized nutrition guidance.</div>
+                    <div class="faq-item"><button class="faq-q">What is included in a routine well-child
+                            visit?<span>＋</span></button>
+                        <div class="faq-a">A well-child visit includes a full physical exam, growth measurement,
+                            developmental milestone check, hearing/vision screening, required vaccines, and personalized
+                            nutrition guidance.</div>
                     </div>
-                    <div class="faq-item"><button class="faq-q">How quickly can I book a same-day sick visit?<span>＋</span></button>
-                        <div class="faq-a">Same-day sick visit slots open daily at 8:00 AM in the portal. You can also call our clinic desk at (555) 234-5678 to reserve an open urgent care slot.</div>
+                    <div class="faq-item"><button class="faq-q">How quickly can I book a same-day sick
+                            visit?<span>＋</span></button>
+                        <div class="faq-a">Same-day sick visit slots open daily at 8:00 AM in the portal. You can also
+                            call our clinic desk at (555) 234-5678 to reserve an open urgent care slot.</div>
                     </div>
-                    <div class="faq-item"><button class="faq-q">Can I download official vaccine certificates for school enrollment?<span>＋</span></button>
-                        <div class="faq-a">Yes! Official state-formatted immunization forms (PDF) are generated automatically in the parent dashboard under the "Documents" tab after every visit.</div>
+                    <div class="faq-item"><button class="faq-q">Can I download official vaccine certificates for school
+                            enrollment?<span>＋</span></button>
+                        <div class="faq-a">Yes! Official state-formatted immunization forms (PDF) are generated
+                            automatically in the parent dashboard under the "Documents" tab after every visit.</div>
                     </div>
-                    <div class="faq-item"><button class="faq-q">What should I bring for my baby's first newborn appointment?<span>＋</span></button>
-                        <div class="faq-a">Please bring your hospital discharge paperwork, insurance card, extra diapers, a change of clothes, and a blanket. Our team handles the rest in a cozy private exam room.</div>
+                    <div class="faq-item"><button class="faq-q">What should I bring for my baby's first newborn
+                            appointment?<span>＋</span></button>
+                        <div class="faq-a">Please bring your hospital discharge paperwork, insurance card, extra
+                            diapers, a change of clothes, and a blanket. Our team handles the rest in a cozy private
+                            exam room.</div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Banner CTA -->
-        <section class="section alt" style="margin-bottom:0">
+        <section class="section alt section-last" style="margin-bottom:0">
             <div class="container">
                 <div class="banner">
                     <div>
                         <h2>Ready to experience modern pediatric care?</h2>
                         <p>Schedule your child's appointment today or sign in to your parent portal.</p>
                     </div>
-                    <div style="display:flex;gap:12px;flex-wrap:wrap">
+                    <div class="banner-actions">
                         <a class="btn btn-primary" href="contact.html#booking">Schedule Visit Now →</a>
                         <a class="btn btn-outline" href="dashboard.html">Access Parent Portal</a>
                     </div>
@@ -420,19 +506,43 @@
                     <a class="logo logo-footer" href="index.html">
                         <img src="assets/logo.png" alt="LittleSteps Pediatric Clinic" class="logo-img">
                     </a>
-                    <p style="max-width:330px">A warm, family-centered pediatric clinic experience designed around healthy growth, prevention and confident parenting.</p>
+                    <p style="max-width:330px">A warm, family-centered pediatric clinic experience designed around
+                        healthy growth, prevention and confident parenting.</p>
                     <div class="footer-social-row">
-                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon instagram" title="Follow us on Instagram" aria-label="Instagram">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon instagram"
+                            title="Follow us on Instagram" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
                         </a>
-                        <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon youtube" title="Subscribe on YouTube" aria-label="YouTube">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                        <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon youtube"
+                            title="Subscribe on YouTube" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
                         </a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon facebook" title="Follow us on Facebook" aria-label="Facebook">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon facebook"
+                            title="Follow us on Facebook" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
                         </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon twitter" title="Follow us on Twitter" aria-label="Twitter">
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" class="social-icon twitter"
+                            title="Follow us on Twitter" aria-label="Twitter">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                </path>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -455,21 +565,36 @@
                 <div>
                     <h4>Contact Us</h4>
                     <div class="footer-contact-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
                         <span>Mon–Sat · 8:30 AM–6:30 PM</span>
                     </div>
                     <div class="footer-contact-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
                         <span>12 Sunshine Avenue<br>Happy Valley</span>
                     </div>
                     <div class="footer-contact-item">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
                         <span>(555) 234-5678</span>
                     </div>
-                    <p style="font-size:12.5px;color:var(--muted);margin-top:8px">Emergency: Please use your local emergency service or call 911.</p>
+                    <p style="font-size:12.5px;color:var(--muted);margin-top:8px">Emergency: Please use your local
+                        emergency service or call 911.</p>
                 </div>
             </div>
-            <div class="copyright">© 2026 LittleSteps Pediatric Clinic & Child Wellness Center · Demo website for presentation purposes.</div>
+            <div class="copyright">© 2026 LittleSteps Pediatric Clinic & Child Wellness Center · Demo website for
+                presentation purposes.</div>
         </div>
     </footer>
 
