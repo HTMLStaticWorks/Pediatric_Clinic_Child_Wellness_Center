@@ -15,17 +15,50 @@ function toggleTheme() {
 }
 
 function updateThemeToggleIcons(theme) {
+    const sunIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+    const moonIcon = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+
     document.querySelectorAll('[data-theme-btn]').forEach(btn => {
-        const isMobileAction = btn.classList.contains('mobile-action-btn');
-        if (isMobileAction) {
-            btn.innerHTML = theme === 'dark'
-                ? `<span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span><span class="nav-text theme-btn-text">Light Mode</span>`
-                : `<span class="nav-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span><span class="nav-text theme-btn-text">Dark Mode</span>`;
+        const iconSpan = btn.querySelector('.nav-icon');
+        if (iconSpan) {
+            iconSpan.innerHTML = theme === 'dark' ? sunIcon : moonIcon;
         } else {
-            btn.innerHTML = theme === 'dark'
-                ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><span class="theme-btn-text">Light</span>`
-                : `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><span class="theme-btn-text">Dark</span>`;
+            btn.innerHTML = theme === 'dark' ? sunIcon : moonIcon;
         }
+        btn.setAttribute('title', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    });
+}
+
+// RTL Direction Management
+function initRTL() {
+    const savedDir = localStorage.getItem('ls_direction') || 'ltr';
+    document.documentElement.setAttribute('dir', savedDir);
+    updateRTLToggleButtons(savedDir);
+}
+
+function toggleRTL() {
+    const currentDir = document.documentElement.getAttribute('dir') || 'ltr';
+    const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
+    document.documentElement.setAttribute('dir', newDir);
+    localStorage.setItem('ls_direction', newDir);
+    updateRTLToggleButtons(newDir);
+    toast(newDir === 'rtl' ? '🌐 Switched to Right-to-Left (RTL)' : '🌐 Switched to Left-to-Right (LTR)');
+}
+
+function updateRTLToggleButtons(dir) {
+    document.querySelectorAll('[data-rtl-btn]').forEach(btn => {
+        const textSpan = btn.querySelector('.nav-text') || btn.querySelector('.rtl-btn-text');
+        const displayText = dir === 'rtl' ? 'LTR' : 'RTL';
+        const titleText = dir === 'rtl' ? 'Switch layout to Left-to-Right (LTR)' : 'Switch layout to Right-to-Left (RTL)';
+        
+        if (textSpan) {
+            textSpan.textContent = displayText;
+        } else {
+            btn.textContent = displayText;
+        }
+        btn.setAttribute('title', titleText);
+        btn.setAttribute('aria-label', titleText);
     });
 }
 
@@ -61,6 +94,9 @@ document.addEventListener('click', e => {
 
     const themeBtn = e.target.closest('[data-theme-btn]');
     if (themeBtn) { toggleTheme(); return; }
+
+    const rtlBtn = e.target.closest('[data-rtl-btn]');
+    if (rtlBtn) { toggleRTL(); return; }
 
     const scrollTopBtn = e.target.closest('[data-action="scrollTop"]');
     if (scrollTopBtn) {
@@ -104,7 +140,9 @@ function toast(message) {
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
+    initRTL();
     initBackToTop();
 });
 initTheme();
+initRTL();
 
